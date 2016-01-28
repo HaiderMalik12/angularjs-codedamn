@@ -8,8 +8,17 @@
  </head>
 <body>
 <div>
- <input type="text" ng-model="name">
-<div> Hello {{name}}</div>
+
+ Party Id <input type="text" ng-model="id"><br>
+ Party Name<input type="text"ng-model="name"><br>
+ Party City<input type="text" ng-model="city"><br>
+ Party Address<textarea ng-model="address"></textarea><br>
+
+<!--  bind these divs to textboxs -->
+<div ng-bind="id"> </div>
+<div ng-bind="name"></div>
+<div ng-bind="city"></div>
+<div ng-bind="address"></div>
 <div> 
 </div>
 </body>
