@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Ng-Repeate Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+
+</head>
+<body>
+<!--Initialize an array of languages-->
+<div ng-init="myFavtLang=[
+ {name:'PHP',ext:'.php'},
+ {name:'JavaScript',ext:'.js'},
+ {name:'C++',ext:'.cpp'}]">
+
+  <!--  Iterate like a for loop-->
+<p ng-repeat="language in myFavtLang">
+    Langaugae : {{language.name}}<br>
+    Extention : {{language.ext}}<br>
+</p>
+
+</div>
+
+</body>
+</html>

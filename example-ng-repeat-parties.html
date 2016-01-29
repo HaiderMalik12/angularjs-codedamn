@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Ng-Repeat-Parties</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+
+<body>
+<!--Initlize buncof Parties-->
+<div ng-init="parties=[
+{id:1,name:'Burj Bank',type:'yarn'},
+{id:2,name:'Haider Malik',type:'Grey'},
+{id:3,name:'Sana Safina',type:'Dye'}
+          ]">
+
+    <!-- Iterate bunch Of Parties-->
+    <p ng-repeat="party in parties">
+        Party Id : {{party.id}}<br>
+        Party Name :{{party.name}}<br>
+        Party Type :{{party.type}}<br>
+    </p>
+</div>
+
+<!--Initlize bunchOfItems-->
+<div ng-init="items=[
+ {id:1,name:'Staple',type:'yarn'},
+ {id:2,name:'Linen',type:'Grey'},
+ {id:3,name:'Cotton',type:'Dye'}
+ ]">
+    <!--Iterate bunchOfItems-->
+    <p ng-repeat="item in items">
+        Item Id : {{item.id}}<br>
+        Item Name :{{item.name}}<br>
+        Item Type :{{item.type}}<br>
+    </p>
+
+</div>
+</body>
+</html>
