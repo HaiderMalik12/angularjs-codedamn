@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Expression Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+</head>
+<body>
+<!--Initialize variables
+var language=angularJS-->
+<div ng-init="language='javascript'">
+
+    Your preferred Language:<input type="text" ng-model="language">
+    {{language}}
+</div>
+
+<!--
+Initilize Variables for Item Model-->
+<div ng-init="itemName='Staple',itemRate=230.0 , qty=0 ,credit=0.0 ,debit=0.0,balance=0.0 ">
+
+   <!-- bind the varibales to the textboxes-->
+    Item Name<input type="text" ng-model="itemName">
+    Item Rate<input type="text" ng-model="itemRate">
+    Qty <input type="text" ng-model="qty">
+    credit <input type="text" ng-model="credit">
+    debit <input type="text" ng-model="debit">
+    balanace <input type="text" ng-model="balance">
+
+</div>
+
+<div ng-bind="itemName"></div>
+<div ng-bind="itemRate"></div>
+<div ng-bind="qty"></div>
+<div ng-bind="credit"></div>
+<div ng-bind="debit"></div>
+<div ng-bind="balance"></div>
+</body>
+</html>
