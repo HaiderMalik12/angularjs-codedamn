@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+
+</head>
+<body>
+
+<!--filter is the awesome thing in angularjs-->
+ Your Name :<input type="text" ng-model="name"><br>
+ Currency :<input type="text" ng-model="price"><br>
+ Credit :<input type="text" ng-model="qty"><br>
+
+   Welcome : {{price | currency:"Rs.":2}}
+   Number :{{qty | number:2}}<br>
+  <br>
+  <br>
+
+  Party Id: <input type="text" ng-model="id"> <br>
+  Party Name :<input type="text" ng-model="name"> <br>
+  Credit : <input type="text" ng-model="credit"><br>
+  Debit : <input type="text" ng-model="debit"><br>
+  Balance :<input type="text" ng-model="balance"><br>
+   <br>
+   <br>
+   Party Id : {{id}} <br>
+   Party Name :{{name}}<br>
+   Credit :{{credit | number:2}}<br>
+   Debit :{{debit  | number:2}}<br>
+   Balance :{{balance | number:2}}<br>
+</body>
+</html>

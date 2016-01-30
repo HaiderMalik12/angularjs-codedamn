@@ -47,7 +47,7 @@
     application.controller('parties', function ($scope) {
 
         $scope.add = function () {
-           $scope.button='Add';
+            $scope.button='Add';
             $scope.partyName='Haider Malik';
             $scope.partyCredit=123.0;
             $scope.partyDebit=123.0;
@@ -57,14 +57,31 @@
         }
         $scope.update = function () {
             $scope.button='Update';
+            $scope.partyName='Update Haider Malik';
+            $scope.partyCredit=1000.0;
+            $scope.partyDebit=1000.0;
+            $scope.partyBalance=1000.0;
+            $scope.partyCity='LHR';
 
         }
         $scope.delete = function () {
             $scope.button='Delete';
 
+            $scope.partyName='Update Haider Malik';
+            $scope.partyCredit=1000.0;
+            $scope.partyDebit=1000.0;
+            $scope.partyBalance=1000.0;
+            $scope.partyCity='LHR';
+
         }
         $scope.save = function () {
             $scope.button='Save';
+
+            $scope.partyName='Delete Haider Malik';
+            $scope.partyCredit=1000.0;
+            $scope.partyDebit=1000.0;
+            $scope.partyBalance=1000.0;
+            $scope.partyCity='LHR';
 
         }
 
