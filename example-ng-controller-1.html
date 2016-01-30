@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="langApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Example ng Controller 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+
+</head>
+<body>
+
+<!--initlize controller -->
+<!--controller will have button and define methods for buttonhanlder handler-->
+ <div ng-controller="languages">
+
+     Select your Favourite Language:
+     <button ng-click="php()"> Php</button>
+     <button ng-click="java()">Java</button>
+     <button ng-click="C()">C++</button>
+     <button ng-click="javaScript()">JavaScript</button>
+
+     <p> You have selected : {{myFavtLanguage}} </p>
+ </div>
+
+
+  <script>
+     var application=angular.module('langApp',[]);
+      application.controller('languages',function($scope){
+
+          $scope.myFavtLanguage='None';
+//
+//          write definition for button action handler
+           $scope.php=function php(){
+               $scope.myFavtLanguage='PHP';
+           }
+          $scope.java=function (){
+              $scope.myFavtLanguage='Java';
+          }
+
+          $scope.C=function(){
+              $scope.myFavtLanguage='C++'
+          }
+          $scope.javaScript=function(){
+              $scope.myFavtLanguage='JavaScript';
+          }
+      });
+
+  </script>
+
+</body>
+</html>
