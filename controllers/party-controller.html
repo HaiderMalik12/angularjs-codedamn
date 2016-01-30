@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="partycoding">
+<head>
+    <meta charset="UTF-8">
+    <title>Party Coding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+</head>
+
+<body style="background-color: transparent">
+<h2>Welcome to Party Coding by Code</h2>
+<!--initialize controller-->
+<div ng-controller="parties">
+
+    <!--make input textboxes-->
+    <b>Party Name</b> <input type="text" style="text-align: center"> <br>
+    <b> Party City</b> <input type="text" style="text-align: center"> <br>
+    <b> Party Credit</b><input type="text" style="text-align: center"><br>
+    <b>Party Debit</b><input type="text"><br>
+    <b>Party Balance</b><input type="text"><br>
+
+    <br>
+    <br>
+
+
+    Party Name   <p>{{partyName}}</p> <br>
+    Party Credit <p>{{partyCredit}}</p> <br>
+    Party Debit  <p> {{partyDebit}}</p><br>
+    party Balance<p>{{partyBalance}}</p><br>
+    Party City   <p> {{partyCity}}</p><br>
+
+    <br>
+    <!--define button handler-->
+    <button ng-click="add()" style="background-color: cornflowerblue">Add</button>
+    <button ng-click="update()" style="background-color: cornflowerblue">Update</button>
+    <button ng-click="delete()" style="background-color: cornflowerblue">Delete</button>
+    <button ng-click="save()" style="background-color:cornflowerblue">Save</button>
+
+     <br>
+      <br>
+    You have Clicked: <p>{{button}}</p>
+
+</div>
+<script>
+
+    var application = angular.module('partycoding', []);
+    application.controller('parties', function ($scope) {
+
+        $scope.add = function () {
+           $scope.button='Add';
+            $scope.partyName='Haider Malik';
+            $scope.partyCredit=123.0;
+            $scope.partyDebit=123.0;
+            $scope.partyBalance=123.0;
+            $scope.partyCity='FSD';
+
+        }
+        $scope.update = function () {
+            $scope.button='Update';
+
+        }
+        $scope.delete = function () {
+            $scope.button='Delete';
+
+        }
+        $scope.save = function () {
+            $scope.button='Save';
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
